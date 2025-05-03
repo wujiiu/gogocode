@@ -24,8 +24,9 @@ const checkUtil = {
     },
     getGlobalPath() {
         try {
-            const output = cmdUtil.getCmdOutput('npm', ['root', '-g']);
-            return output.trim();
+            return '/Users/wujiu/Documents/code/openSource/gogocode/packages'
+            // const output = cmdUtil.getCmdOutput('npm', ['root', '-g']);
+            // return output.trim();
         } catch (error) {
             console.error(error);
             return null;
@@ -43,7 +44,7 @@ const checkUtil = {
             const localVersion = pkg.version;
 
             if (semver.lt(localVersion, latestVersion)) {
-                console.log(chalk.yellow(`\n♨ gogocode-cli工具升级提示：`));
+                console.log(chalk.yellow(`\n♨ gogocode-cli工具升级提示121：`));
                 console.log(chalk.white(`  当前版本: ${chalk.grey(localVersion)}`));
                 console.log(chalk.white(`  最新版本: ${chalk.cyan(latestVersion)}`));
                 console.log(`  运行 ${chalk.green(`npm install -g gogocode-cli`)} 即可更新`);

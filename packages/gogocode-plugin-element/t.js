@@ -74,10 +74,13 @@ function execRule(ruleName) {
             const prettierOutPut = prettier.format(outputCode, {
                 trailingComma: 'es5',
                 tabWidth: 2,
-                semi: false,
+                semi: true,
                 singleQuote: true,
                 printWidth: 80,
                 parser: 'vue',
+                "bracketSpacing": true,
+                "htmlWhitespaceSensitivity": "ignore",
+                "endOfLine": "auto",
             });
 
             fs.writeFile(outputPath, prettierOutPut, function (err) {

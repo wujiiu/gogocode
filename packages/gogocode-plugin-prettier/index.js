@@ -27,7 +27,7 @@ module.exports = function (fileInfo, api, options) {
     return prettier.format(sourceCode, {
         trailingComma: 'es5',
         tabWidth: 2,
-        semi: false,
+        semi: true,
         singleQuote: true,
         printWidth: 80,
         parser: /\.vue$/.test(fileInfo.path) ? 'vue' : 'typescript',

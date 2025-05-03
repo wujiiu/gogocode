@@ -171,7 +171,7 @@ function addUtils( $ ,extFunCode, outRootPath, outFilePath, fileName) {
             const prettierOutPut = prettier.format(ast.generate(), {
                 trailingComma: 'es5',
                 tabWidth: 2,
-                semi: false,
+                semi: true,
                 singleQuote: true,
                 printWidth: 80,
                 parser: 'typescript',

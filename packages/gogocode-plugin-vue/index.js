@@ -56,7 +56,7 @@ const transform = function (fileInfo, api, options) {
         : (format ? prettier.format(outAst.generate(), {
             trailingComma: 'es5',
             tabWidth: 2,
-            semi: false,
+            semi: true,
             singleQuote: true,
             printWidth: 80,
             parser: /\.vue$/.test(fileInfo.path) ? 'vue' : 'typescript',
