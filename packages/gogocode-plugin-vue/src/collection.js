@@ -66,7 +66,7 @@ function listFiles(rootPath) {
  */
 function getFiles(parentPath, fileList) {
     let files = fse.readdirSync(parentPath);
-    if (parentPath.indexOf('node_modules') > -1) {
+    if (parentPath.indexOf('node_modules') > -1 || parentPath.indexOf('.git') > -1) {
         return;
     }
     files.forEach((item) => {

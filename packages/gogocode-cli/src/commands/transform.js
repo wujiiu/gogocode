@@ -340,7 +340,7 @@ function handleTransform(tranFns, srcPath, outPath, params, resolve, reject) {
         paramsToOptions(params, options);
 
         if (srcIsDir) {
-            const files = fileUtil.listFiles(srcFullPath);
+            const files = fileUtil.listFiles(srcFullPath, ['.git']);
             confirmTransformLargeFiles(files).then((canTransformLargeFiles) => {
                 //canTransformLargeFiles 是否大文件转换，true：转换
                 preTransform(tranFns, options);
